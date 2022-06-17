@@ -1,0 +1,4 @@
+<aside class="admonition {{ index .Params 0 }}">
+    <p class="admonition-title">{{ index .Params 0 | title }}</p>
+    <p>{{- .Inner | markdownify -}}</p>
+</aside>

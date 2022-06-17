@@ -1,0 +1,9 @@
+name = "jakeprice.dev"
+license = "MIT"
+licenselink = "https://github.com/jakeprice-dev/jpd/blob/master/LICENSE"
+description = "Custom Hugo theme for jakeprice.dev"
+homepage = "https://jakeprice.dev"
+tags = []
+features = []
+min_version = "0.89.0"
+

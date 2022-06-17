@@ -1,0 +1,25 @@
+{{ define "main" }}
+
+<div id="featured">
+    <div id="featured-container">
+        <h2>Latest Posts</h2>
+        <ul>
+        {{ range first 4 (where .Site.RegularPages "Section" "posts") }}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a> <date>{{ .Date.Format "01/06" }}</date></li>
+        {{ end }}
+        </ul>
+    </div>
+</div>
+
+<div id="older">
+    <div id="older-container">
+        <h2>Older Posts</h2>
+        <ul>
+            {{ range after 4 (where .Site.RegularPages "Section" "posts") }}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a> <date>{{ .Date.Format "01/06" }}</date></li>
+            {{ end}}
+        </ul>
+    </div>
+</div>
+
+{{ end }}

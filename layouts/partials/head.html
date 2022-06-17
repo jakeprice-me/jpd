@@ -1,0 +1,24 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="HandheldFriendly" content="True">
+{{ if .IsHome }}
+<title>{{ .Site.Title }}{{ if isset .Site.Params "pagetitle" }} - {{ .Site.Params.Pagetitle }}{{ end }} </title>
+{{- else -}}
+<title>{{ .Title }} - {{ .Site.Title }}</title>
+{{- end -}}    
+
+<link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="{{ .Summary }}">
+<meta property="og:image" content="{{ .Params.image }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:description" content="{{ .Summary }}">
+<meta name="twitter:image" content="{{ .Params.image }}">
+<meta name="twitter:card" content="summary_large_image">    
+{{ range .AlternativeOutputFormats -}}
+{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ end -}}
+<link rel="stylesheet" href="/css/stylesheet.css">
+<link rel="stylesheet" href="/css/remixicon.css">
