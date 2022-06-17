@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div id="title">
+    <div id="title-container">
+        <h1>{{ .Title }}</h1>
+        <p id="title-container-info">
+            <date><i class="ri-calendar-2-line"></i> {{ .Date.Format "01/06" }}</date><span id="title-container-info-reading-time"><i class="ri-file-list-2-line"></i> {{ .ReadingTime }} min read</span>
+        </p>
+    </div>
+</div>
+<article>
+    <div id="article-container">
+
+    {{ .Content }}
+
+    </div>
+</article>
+{{ end }}
