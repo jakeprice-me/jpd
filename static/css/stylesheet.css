@@ -655,12 +655,12 @@ footer {
 
 #article-container a:link,
 #article-container a:visited {
-    color: #304ffe;
+    color: #1a237e;
 }
 
 #article-container a:hover,
 #article-container a:active {
-    color: #1a237e;
+    color: #304ffe;
 }
 
 #article-container p {
@@ -704,6 +704,10 @@ footer {
 #article-container del {
     opacity: 0.5;
     text-decoration: line-through; 
+}
+
+#article-container ul, ol {
+    padding: 0 0 1.5rem 1rem;
 }
 
 #article-container li {
@@ -1293,7 +1297,7 @@ footer {
 }
 
 #article-container table {
-    margin: 2rem 0;
+    margin: 0rem 0 1.5rem 0;
     width: 100%;
     line-height: 3rem;
     table-layout: fixed;
@@ -1301,11 +1305,11 @@ footer {
     border-radius: 1rem;
 }
 
+#article-container tr {
+    border-bottom: 1px solid #ccc;
+}
+
 #article-container th {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    z-index: 2;   
     padding: 1rem;
     text-align: left;
     vertical-align: middle;
@@ -1320,7 +1324,7 @@ footer {
     text-align: left;
     vertical-align: middle;
     color: #111111;
-    border: 0.1rem solid #cccccc;
+    border: 1px solid #cccccc;
 }
 
 #about-container {
