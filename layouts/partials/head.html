@@ -9,14 +9,16 @@
 {{- end -}}    
 
 <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+
+{{ if .IsHome }}
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="I'm a technology professional who's been passionate about computers since my Grandad introduced me to an Intel 386 back in the 90s when I was a kid. Those moments inspired a passion within for technology, and I've been playing around with anything with a circuit board ever since. Whenever I have a moment you can probably find me working on something computer-related, and this is where I like to write about those moments.">
+{{- else -}}
 <meta property="og:title" content="{{ .Title }}">
 <meta property="og:description" content="{{ .Summary }}">
-<meta property="og:image" content="{{ .Params.image }}">
+{{ end }}
+<meta property="og:image" content="/images/opengraph_image.png">
 <meta property="og:url" content="{{ .Permalink }}">
-<meta name="twitter:title" content="{{ .Title }}">
-<meta name="twitter:description" content="{{ .Summary }}">
-<meta name="twitter:image" content="{{ .Params.image }}">
-<meta name="twitter:card" content="summary_large_image">    
 {{ range .AlternativeOutputFormats -}}
 {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
