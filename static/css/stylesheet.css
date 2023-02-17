@@ -456,7 +456,8 @@ footer {
     line-height: 3rem;
 }
 
-#featured-container li a:link, a:visited {
+#featured-container li a:link, 
+#featured-container li a:visited {
     color: #fff;
 }
 
@@ -487,6 +488,11 @@ footer {
     flex-grow: 1;
     opacity: 0.5;
     text-align: right;
+}
+
+#older-container li a:link, 
+#older-container li a:visited {
+    color: #111;
 }
 
 #title-container h1 {
