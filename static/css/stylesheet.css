@@ -416,7 +416,7 @@ footer {
 #header-container-logo img {
     margin-right: 1.5rem;
     display: block;
-    width: 4.5rem;
+    width: 3.6rem;
     height: auto;
     image-rendering: -webkit-optimize-contrast;
 }
@@ -425,7 +425,7 @@ footer {
     order: 1;
     flex-grow: 1;
     font-family: var(--logo);
-    font-size: 3.4rem;
+    font-size: 3.2rem;
 }
 
 #header-container-title h1 {
