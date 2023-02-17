@@ -619,6 +619,25 @@ footer {
     border: 1px solid #eee;
 }
 
+#article-container .full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    border-radius: 0;
+    border: 0;
+}
+
+#article-container figcaption {
+    margin: 0 0 2rem 0;
+    line-height: 3rem;
+    font-size: 1.4rem;
+    text-align: center;
+    color: #ccc;
+}
+
 #article-container a:link,
 #article-container a:visited {
     color: #1a237e;
