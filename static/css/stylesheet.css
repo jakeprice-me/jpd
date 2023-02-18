@@ -318,6 +318,31 @@ table {
     --header: Cairo, sans-serif;
     --main: "Open Sans", sans-serif;
     --monospace: "Ubuntu Mono", monospace;
+
+     /* :::: Colour ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+    --blue-grey-100: #cfd8dc;
+    --blue-grey-200: #b0bec5;
+    --blue-grey-50: #eceff1;
+    --blue-grey-600: #546e7a;
+    --blue-grey-800: #37474f;
+    --blue-grey-900: #263238;
+    --blue-100: #bbdefb;
+    --blue-900: #0d47a1;
+    --deep-purple-100: #d1c4e9;
+    --deep-purple-900: #311b92;
+    --green-100: #c8e6c9;
+    --green-50: #e8f5e9;
+    --green-900: #1b5e20;
+    --green-a700: #00c853;
+    --grey-50: #fafafa;
+    --grey-900: #212121;
+    --orange-50: #fff3e0;
+    --orange-900: #e65100;
+    --orange-a700: #ff6d00;
+    --red-50: #ffebee;
+    --red-a700: #d50000;
+    --white: #ffffff;
+
 }
 
 /* ==== Main =============================================================== */
@@ -521,7 +546,7 @@ footer {
 }
 
 #title-container-info i {
-    vertical-align: -0.25rem;
+    font-size: 1.8rem;
 }
 
 #article-container aside#toc {
@@ -637,6 +662,17 @@ footer {
     text-align: center;
     color: #ccc;
 }
+
+#article-container figcaption a:link,
+#article-container figcaption a:visited {
+    color: #ccc;
+}
+
+#article-container figcaption a:hover,
+#article-container figcaption a:active {
+    color: #111;
+}
+
 
 #article-container a:link,
 #article-container a:visited {
@@ -1158,127 +1194,120 @@ footer {
     padding: 0;
 }
 
-#article-container .admonition {
-    margin: 1.5rem 0 1.5rem 0;
+.admonition-title {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    font-weight: 600;
+    margin: 2rem 0 0 0;
+    padding: 1rem 2rem 1rem 2rem;
+    word-break: break-word;
+}
+
+.admonition-message {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    margin: 0 0 2rem 0;
     padding: 2rem;
-    border-radius: 1rem;
-    border-width: 0 0 0 2px;
-    border-style: solid;
 }
 
-#article-container .admonition-title:before {
-    margin: 0 0.3rem 0 0;
-    vertical-align: -0.19rem;
-    font-family: remixicon;
-    font-weight: 400;
+.admonition.attention .admonition-title {
+    background: var(--red-a700);
+    color: var(--white);
 }
 
-#article-container .admonition-title {
-    padding: 0;
+.admonition.attention .admonition-message {
+    background: var(--red-50);
+    color: var(--red-a700);
 }
 
-#article-container .admonition.important {
-    background: #ffcdd2; /* 400 */
-    border-color: #b71c1c; /* 900 */
+.admonition.caution .admonition-title {
+    background: var(--orange-a700);
+    color: var(--white);
 }
 
-#article-container .admonition.important .admonition-title:before {
-    content: "\eca1";
+.admonition.caution .admonition-message {
+    background: var(--orange-50);
+    color: var(--orange-900);
 }
 
-#article-container .admonition.important .admonition-title {
-    color: #b71c1c; /* 900 */
+.admonition.danger .admonition-title {
+    background: var(--red-a700);
+    color: var(--white);
 }
 
-#article-container .admonition.caution {
-    background: #ffecb3;
-    border-color: #e65100;
+.admonition.danger .admonition-message {
+    background: var(--red-50);
+    color: var(--red-a700);
 }
 
-#article-container .admonition.caution .admonition-title:before {
-    content: "\eca1";
+.admonition.danger .admonition-title {
+    background: var(--red-a700);
+    color: var(--white);
 }
 
-#article-container .admonition.caution .admonition-title {
-    color: #e65100;
+.admonition.danger .admonition-message {
+    background: var(--red-50);
+    color: var(--red-a700);
 }
 
-#article-container .admonition.hint {
-    background: #c8e6c9;
-    border-color: #1b5e20;
+.admonition.success .admonition-title {
+    background: var(--green-a700);
+    color: var(--white);
 }
 
-#article-container .admonition.hint .admonition-title:before {
-    content: "\f045";
+.admonition.success .admonition-message {
+    background: var(--green-50);
+    color: var(--green-900);
 }
 
-#article-container .admonition.hint .admonition-title {
-    color: #1b5e20;
+.admonition.hint .admonition-title {
+    background: #6200EA;
+    color: var(--white);
 }
 
-#article-container .admonition.note {
-    background: #bbdefb;
-    border-color: #0d47a1;
+.admonition.hint .admonition-message {
+    background: #EDE7F6;
+    color: var(--deep-purple-900);
 }
 
-#article-container .admonition.note .admonition-title:before {
-    content: "\ee59";
+.admonition.important .admonition-title {
+    background: var(--red-a700);
+    color: var(--white);
 }
 
-#article-container .admonition.note .admonition-title {
-    color: #0d47a1;
+.admonition.important .admonition-message {
+    background: var(--red-50);
+    color: var(--red-a700);
 }
 
-#article-container .admonition.tip {
-    background: #c8e6c9;
-    border-color: #1b5e20;
+.admonition.note .admonition-title {
+    background: #9E9E9E;
+    color: var(--white);
 }
 
-#article-container .admonition.tip .admonition-title:before {
-    content: "\eea8";
+.admonition.note .admonition-message {
+    background: var(--grey-50);
+    color: #424242;
 }
 
-#article-container .admonition.tip .admonition-title {
-    color: #1b5e20;
+.admonition.tip .admonition-title {
+    background: #0091EA;
+    color: var(--white);
 }
 
-#article-container .admonition.warning {
-    background: #ffecb3;
-    border-color: #e65100;
+.admonition.tip .admonition-message {
+    background: #E1F5FE;
+    color: #0D47A1;
 }
 
-#article-container .admonition.warning .admonition-title:before {
-    content: "\eca1";
+.admonition.warning .admonition-title {
+    background: var(--red-a700);
+    color: var(--white);
 }
 
-#article-container .admonition.warning .admonition-title {
-    color: #e65100;
-}
-
-#article-container .admonition.danger {
-    background: #ffcdd2;
-    border-color: #b71c1c;
-}
-
-#article-container .admonition.danger .admonition-title:before {
-    content: "\eca1";
-}
-
-#article-container .admonition.danger .admonition-title {
-    color: #b71c1c;
-}
-
-#article-container .admonition.error {
-    background: #ffecb3;
-    border-color: #e65100;
-}
-
-#article-container .admonition.error .admonition-title:before {
-    content: "\eca1";
-}
-
-#article-container .admonition.error .admonition-title {
-    color: #e65100;
+.admonition.warning .admonition-message {
+    background: var(--red-50);
+    color: var(--red-a700);
 }
 
 #article-container table {
@@ -1359,7 +1388,7 @@ footer {
 }
 
 #footer-container-links i {
-    vertical-align: -0.25rem;
+    font-size: 1.8rem;
 }
 
 #footer-container a:link,

@@ -1,4 +1,8 @@
 <aside class="admonition {{ index .Params 0 }}">
-    <p class="admonition-title">{{ index .Params 0 | title }}</p>
-    <p>{{- .Inner | markdownify -}}</p>
+    <div class="admonition-title">
+        <p>{{ index .Params 0 | title }}</p>
+    </div>
+    <div class="admonition-message">
+        <p>{{- .Inner | markdownify -}}</p>
+    </div>
 </aside>
