@@ -1,6 +1,6 @@
-# Custom Hugo Theme for jakeprice.dev
+# Custom Hugo Theme for jakeprice.me
 
-A simple enough theme I've built for my underused blog at [jakeprice.dev](https://jakeprice.dev).
+A simple enough theme I've built for my blog at [jakeprice.me](https://jakeprice.me).
 
 ## Preview
 
